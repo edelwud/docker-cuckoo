@@ -92,7 +92,7 @@ setUpCuckoo(){
   setDefaults
   echo
   echo "===> Update /cuckoo/conf/reporting.conf if needed..."
-  /update_conf.py
+  # /update_conf.py
   echo
   # Wait until all services are started
   if [ ! "$ES_HOST" == "" ]; then

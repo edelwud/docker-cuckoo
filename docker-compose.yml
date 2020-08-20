@@ -2,13 +2,14 @@ version: "2"
 
 services:
   cuckoo:
-    image: blacktop/cuckoo:2.0
+    image: edelwud/cuckoo:latest
     command: daemon
     ports:
       - "2042:2042"
     volumes:
       - ./cuckoo-tmp/:/tmp/cuckoo-tmp/
       - ./storage/:/cuckoo/storage/
+      - ./2.0/conf/:/cuckoo/conf
     networks:
       - cuckoo
     env_file:
